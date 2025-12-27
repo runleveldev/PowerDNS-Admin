@@ -169,6 +169,7 @@ class AppSettings(object):
         'oidc_oauth_last_name': 'family_name',
         'oidc_oauth_account_name_property': '',
         'oidc_oauth_account_description_property': '',
+        'oidc_oauth_userinfo_endpoint': 'userinfo',
 
         # SAML Authentication Settings
         'saml_enabled': False,
