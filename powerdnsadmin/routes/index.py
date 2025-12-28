@@ -395,7 +395,7 @@ def login():
         user_data = json.loads(oidc.get(Setting().get('oidc_oauth_userinfo_endpoint')).text)
         oidc_username = user_data[Setting().get('oidc_oauth_username')]
         oidc_first_name = user_data[Setting().get('oidc_oauth_firstname')]
-        oidc_last_name = user_data[Setting().get('oidc_oauth_last_name')]
+        oidc_last_name = user_data[Setting().get('oidc_oauth_last_name')] if Setting().get('oidc_oauth_last_name') else ''
         oidc_email = user_data[Setting().get('oidc_oauth_email')]
 
         user = User.query.filter_by(username=oidc_username).first()
